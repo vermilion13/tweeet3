@@ -1,0 +1,28 @@
+<%= form_with(model: @tweeet, local: true ,url: choose_new_or_edit ) do |form| %>
+  <% if @tweeet.errors.any? %>
+    <div id="error_explanation">
+      <h1><%= @tweeet.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @tweeet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="tweeet_content">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit %>
+<% end %>
+
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright c 2018 千田 玄 for fullstack NTTコムチェオ1月期</p>
+    </footer>
+</div>

@@ -1,0 +1,44 @@
+<div class="container">
+
+    <header class="header clearfix">
+        <%= image_tag('z_logo.png') %>
+        <p>Rails入門シリーズ</p>
+    </header>
+
+    <nav class="navi clearfix">
+        <ul>
+            <li><%= link_to 'TOPページ', 'top' %></li>
+            <li><%= link_to '呟き一覧', tweeets_path %></li>
+            <li><%= link_to '新しく呟く', new_tweeet_path %></li>
+        </ul>
+    </nav>
+
+    <div class="main clearfix">
+        <article class="content">
+            <section>
+                <h1>とぅいったーくろーん一覧ページ</h1>
+                <p>
+                    <%= notice %>
+                </p>
+                <table>
+                  <tr>
+                    <th>呟き一覧</th>
+                  </tr>
+
+                <% @tweeets.each do |tweeet| %>
+                    <tr>
+                        <td><%= tweeet.content %></td>
+                        <td><div class="button01"><%= link_to '詳細を読む', tweeet_path(tweeet.id) %></div></td>
+                        <td><div class="button01"><%= link_to '編集する', edit_tweeet_path(tweeet.id) %></div></td>
+                        <td><div class="button01"><%= link_to '削除する', tweeet_path(tweeet.id), method: :delete ,data: { confirm: '本当に削除して良いですか？' } %></div></td>
+                    </tr>
+                <% end %>
+                </table>
+            </section>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright c 2018 千田 玄 for fullstack NTTコムチェオ1月期</p>
+    </footer>
+</div>

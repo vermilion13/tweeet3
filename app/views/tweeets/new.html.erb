@@ -1,0 +1,20 @@
+<div class="container">
+
+    <header class="header clearfix">
+        <%= image_tag('z_logo.png') %>
+        <p>Rails入門シリーズ</p>
+    </header>
+
+    <nav class="navi clearfix">
+        <ul>
+            <li><%= link_to 'TOPページ', 'top' %></li>
+            <li><%= link_to '呟き一覧', tweeets_path %></li>
+            <li><%= link_to '新しく呟く', new_tweeet_path %></li>
+        </ul>
+    </nav>
+
+    <div class="main clearfix">
+        <article class="content">
+            <section>
+                <h1>新しく呟く</h1>
+                  <%= render 'form' %>
