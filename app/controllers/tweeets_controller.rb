@@ -1,7 +1,7 @@
 class TweeetsController < ApplicationController
   
   before_action :set_tweeet, only: [:show, :edit, :update, :destroy]
-  before_action :current_user, only: [:new, :edit, :show, :destroy]
+  before_action :login_check, only: [:new, :edit, :show, :destroy]
 
   
   def index
@@ -64,9 +64,12 @@ class TweeetsController < ApplicationController
     @tweeet = Tweeet.find(params[:id])
   end
 
-  def current_user
-    @current_user ||=  redirect_to new_session_path
-    flash[:notice] = 'ログインしてね！'
+  def login_check
+    if !logged_in?
+        flash[:notice] = 'ログインしてね'
+        redirect_to new_session_path
+    end
+
   end
 
 end
