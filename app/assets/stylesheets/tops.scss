@@ -2,7 +2,7 @@
 
 html {
     height: 100%;
-    font-size: 75%;　/*12px相当の筈*/
+    font-size: 75%;
 }
 
 body {
@@ -101,11 +101,34 @@ li {
     padding-bottom: 46px;
 }
 
+/*サイドメニュー*/
+
+.side_menu{
+    width: 200px;
+    float: right;
+}
+
+.side_menu li a{
+    text-decoration: none;
+    background-color: #808080;
+    color:#fff;
+    font-size: 1rem;
+    height: 3rem;
+    padding-top: 2rem;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.side_menu a:hover{
+    text-decoration: underline;
+    opacity: 0.5;
+}
+
 /*コンテンツ*/
 
 .content{
-    width: 100%;
-    margin-right: :20px;
+    width: 760px;
+    margin-right: 20px;
     float: left;
     background-color: #eee;
     font-size: 1rem;
@@ -157,10 +180,60 @@ h2{
     padding: 1rem;
 }
 
+.c_me_td{
+    position: relative;
+    width:156px;
+}
+
+.c_me_td p{
+    position: absolute;
+    top:40%;
+    left:20%;
+	color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: #fff 1px 1px 0, #fff -1px -1px 0,
+        #fff -1px 1px 0, #fff 1px -1px 0,
+        #fff 0px 1px 0, #fff  0-1px 0,
+        #fff -1px 0 0, #fff 1px 0 0;
+}
+
+.qa_l{
+    margin-left: 24px;
+}
+
+.qa_l p{
+    float: left;
+    width: 400px;
+    line-height: 2rem;
+}
+
+.qa_l img{
+    width: 320px;
+    float: right;
+}
+
+.qa_r{
+    margin-left: 24px;
+}
+
+.qa_r p{
+    float: right;
+    width: 400px;
+    line-height: 2rem;
+}
+
+.qa_r img{
+    width: 320px;
+    float: left;
+}
+
+
+
 /*フッター*/
 
 .container{
-  width: 100%;
+  width: 980px;
   margin: 0 auto;
   position: relative;
   min-height: 100%;
@@ -182,13 +255,3 @@ h2{
   display: table-cell;
 }
 
-/*草食*/
-
-.button01{
-    background-color:#98fb98;
-    color:#000;
-}
-div.button01 a:hover{
-    font-size:18px;
-    color:#000;
-}

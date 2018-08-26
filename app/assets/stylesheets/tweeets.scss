@@ -1,0 +1,177 @@
+/*全体*/
+
+html {
+    height: 100%;
+    font-size: 75%;
+}
+
+body {
+    width: 980px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+
+/*ヘッダ*/
+
+.header {
+    background-color: #808080;
+    height: 216px;
+}
+
+.logo_set {
+    width: 100%;
+    float: left;
+}
+
+.header p{
+    position: absolute;
+	color: white;
+	top: 0;
+	left: 2%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: black 2px 0px, black -2px 0px,
+        black 0px -2px, black 0px 2px,
+        black 2px 2px , black -2px 2px,
+        black 2px -2px, black -2px -2px,
+        black 1px 2px,  black -1px 2px,
+        black 1px -2px, black -1px -2px,
+        black 2px 1px,  black -2px 1px,
+        black 2px -1px, black -2px -1px;
+}
+
+.header a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.header a:hover{
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/*ナビ*/
+
+.navi{
+    margin-top: 6px;
+    width: 100%;
+    background-color: #808080;
+}
+
+.navi li a{
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    float: left;
+    padding: 10px;
+    margin: 0.1rem;
+}
+
+.navi li a:hover {
+    background-color: #A0A0A0;
+    text-decoration: underline;
+}
+
+
+/*サイド＆メイン*/
+
+.main{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 46px;
+}
+
+/*コンテンツ*/
+
+.content{
+    width: 100%;
+    margin-right: 20px;
+    float: left;
+    background-color: #eee;
+    font-size: 1rem;
+}
+
+.content section{
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+
+h1{
+    font-size:2rem;
+    margin-top: 6px;
+    margin-right: 6px;
+    padding: 0.5rem;
+    color: #000;
+    background-color: #ddd;
+    border-left: solid 6px #808080;
+}
+
+h2{
+    font-size:1.5rem;
+    margin-top: 6px;
+    margin-left: 12px;
+    margin-right: 6px;
+    padding: 0.5rem;
+    color: #000;
+    background-color: #ddd;
+    border-left: solid 6px #a0a0a0;
+    border-bottom: solid 1px #a0a0a0;
+}
+
+div.blog-panel {
+    font-size:1.5rem;
+    height: 100px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.blog-panel span {
+    background-color:#ddd;
+}
+
+
+/*フッター*/
+
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer{
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  background-color: #808080;
+  display: table;
+}
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+

@@ -1,31 +1,16 @@
-<div class="container">
-
-    <header class="header clearfix">
-        <%= image_tag('z_logo.png') %>
-        <p>Rails入門シリーズ</p>
-    </header>
-
-    <nav class="navi clearfix">
-        <ul>
-            <li><%= link_to 'TOPページ', 'top' %></li>
-            <li><%= link_to '呟き一覧', tweeets_path %></li>
-            <li><%= link_to '新しく呟く', new_tweeet_path %></li>
-        </ul>
-    </nav>
-
-    <div class="main clearfix">
-        <article class="content">
-            <section>
-                <h1>とぅいったーくろーん</h1>
-                <p>
-                    PHASE2大課題のtwitterクローン作成のページです。<br>
-                    時間が無かった為、TOP画像等は使い回しで。夏らしくて丁度良いという事に。
-                </p>
-            </section>
-        </article>
-    </div>
-
-    <footer class="footer">
-        <p>Copyright c 2018 千田 玄 for fullstack NTTコムチェオ1月期</p>
-    </footer>
+<div class="main clearfix">
+    <article class="content">
+        <section>
+            <h1>とぅいったーくろーん</h1>
+            <p>
+                PHASE2大課題のtwitterクローン作成のページを、Bootstrapシリーズ課題に作り替えたアプリです。<br>
+                上の『新しく呟く』から色々と呟けますよ。<br>
+                夏の終わりに呟いてみましょう。
+            </p>
+            <ul class="row">
+                <li class="col-md-6"><%= image_tag("tweeet.jpg") %></li>
+                <li class="col-md-6">もう夏も終わるんだ、という思いを呟く。</li>
+            </ul>
+        </section>
+    </article>
 </div>
