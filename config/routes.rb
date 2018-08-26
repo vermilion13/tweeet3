@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+    resources :sessions, only: [:new, :create, :destroy]
+    resources :users
+
     root to: 'tweeets#top'
     get '/top',to: 'tweeets#top'
-#    get '/index', to: 'tweeets#index'
 
     resources :tweeets do
         collection do
