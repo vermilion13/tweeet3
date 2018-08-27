@@ -3,6 +3,13 @@
             <section>
                 <h1>記事詳細画面</h1>
                 <p>内容: <%= @tweeet.content %></p>
+                    <% unless @tweeet.user_id == current_user.id %>
+                        <% if @favorite.present? %>
+                            <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
+                        <% else %>
+                            <%= link_to 'お気に入りする', favorites_path(tweeet_id: @tweeet.id), method: :post, class: 'btn btn-primary' %>
+                          <% end %>
+                    <% end %>
             </section>
         </article>
     </div>

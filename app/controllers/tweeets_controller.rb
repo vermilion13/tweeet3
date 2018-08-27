@@ -18,6 +18,7 @@ class TweeetsController < ApplicationController
 
   def create
     @tweeet = Tweeet.new(tweeet_params)
+    @tweeet.user_id = current_user.id
     if @tweeet.save
       redirect_to tweeets_path, notice: "記事を登録しました。"
     else
@@ -26,6 +27,7 @@ class TweeetsController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(tweeet_id: @tweeet.id)
   end
 
   def edit
