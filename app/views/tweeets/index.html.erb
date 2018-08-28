@@ -9,8 +9,15 @@
                     <p><span><%= tweeet.content %></span></p>
                     <div class="blog-links">
                         <%= link_to '詳細を読む', tweeet_path(tweeet.id), class: 'btn btn-default' %>
-                        <%= link_to '編集する', edit_tweeet_path(tweeet.id), class: 'btn btn-default' %>
-                        <%= link_to '削除する', tweeet_path(tweeet.id), method: :delete ,data: { confirm: '削除しちゃいます？' }, class: 'btn btn-danger' %>
+                        <% if logged_in? %>
+                            <% if tweeet.user_id == current_user.id %>
+                                <%= link_to '編集する', edit_tweeet_path(tweeet.id), class: 'btn btn-default' %>
+                                <%= link_to '削除する', tweeet_path(tweeet.id), method: :delete ,data: { confirm: '削除しちゃいます？' }, class: 'btn btn-danger' %>
+                            <% else %>
+                                投稿者以外は操作出来ません
+                            <% end %>
+                        <% end %>
+
                     </div>
                 </div>
                 <% end %>

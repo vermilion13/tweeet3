@@ -3,6 +3,18 @@
             <section>
                 <h1><%= @user.name %>さんの情報です</h1>
                 <p>登録メアド: <%= @user.email %></p>
+            <h1>お気に入りの呟き</h1>
+            <div class="row">
+                <% @favorites_tweeets.each do |tweeet| %>
+                    <div class="col-xs-12 col-md-6 blog-panel">
+                        <p><span><%= tweeet.content %></span></p>
+                        <div class="blog-links">
+                            <%= link_to '詳細を読む', tweeet_path(tweeet.id), class: 'btn btn-default' %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+
             </section>
         </article>
     </div>

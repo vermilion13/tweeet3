@@ -2,16 +2,17 @@
     <article class="content">
         <section>
             <h1>以下の内容でよろしいですか？</h1>
-              <%= form_with(model: @tweeet, url: tweeets_path, local: true) do |form| %>
-              <%= form.hidden_field :content %>
-              <p>内容:<%= @tweeet.content %></p>
-              <%= form.submit  "登録する" %>
-              <% end %>
+                <%= form_with(model: @tweeet, url: tweeets_path, local: true) do |form| %>
+                <%= form.hidden_field :content %>
 
-              <%= form_with(model: @tweeet, url: new_tweeet_path, local: true, method: 'get') do |form| %>
-              <%= form.hidden_field :content %>
-              <%= form.submit "もどる", name: 'back' %>
-              <% end %>
+                <p>内容:<%= @tweeet.content %></p>
+                 <%= form.submit  "登録する" %>
+                <% end %>
+
+                <%= form_with(model: @tweeet, url: new_tweeet_path, local: true, method: 'get') do |form| %>
+                <%= form.hidden_field :content %>
+                <%= form.submit "もどる", name: 'back' %>
+                <% end %>
         </section>
     </article>
 </div>
