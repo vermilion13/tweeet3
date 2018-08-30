@@ -19,10 +19,9 @@
             <li><%= link_to 'TOPページ', top_path %></li>
             <li><%= link_to '呟き一覧', tweeets_path %></li>
             <li><%= link_to '新しく呟く', new_tweeet_path %></li>
-            <li><%= link_to '画像投稿', feeds_path %></li>
             <li><%= link_to 'メール送信', new_contact_path %></li>
               <% if logged_in? %>
-                <li><%= link_to "プロフィール", user_path(current_user.id) %></li>
+                <li><%= link_to "マイページ", user_path(current_user.id) %></li>
                 <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete %></li>
               <% else %>
                 <li><%= link_to 'ユーザー登録', new_user_path %></li>

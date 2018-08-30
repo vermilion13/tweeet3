@@ -59,7 +59,7 @@ class TweeetsController < ApplicationController
   private
 
   def tweeet_params
-    params.require(:tweeet).permit(:content)
+    params.require(:tweeet).permit(:content, :image, :image_cache)
   end
 
   def set_tweeet

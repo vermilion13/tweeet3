@@ -2,6 +2,7 @@
         <article class="content">
             <section>
                 <h1>記事詳細画面</h1>
+                <p>画像: <%= image_tag @tweeet.image %></p>
                 <p>内容: <%= @tweeet.content %></p>
                     <% unless @tweeet.user_id == current_user.id %>
                         <% if @favorite.present? %>

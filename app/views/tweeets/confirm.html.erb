@@ -5,7 +5,13 @@
                 <%= form_with(model: @tweeet, url: tweeets_path, local: true) do |form| %>
                 <%= form.hidden_field :content %>
 
+                <p>呟き主:<%= current_user.name %></p>
+                <p>メアド:<%= current_user.email %></p>
                 <p>内容:<%= @tweeet.content %></p>
+                
+                <%= image_tag(@tweeet.image) %>
+                <%= form.hidden_field :image_cache %>
+
                  <%= form.submit  "登録する" %>
                 <% end %>
 
