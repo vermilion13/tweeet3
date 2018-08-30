@@ -20,7 +20,7 @@ class TweeetsController < ApplicationController
     @tweeet = Tweeet.new(tweeet_params)
     @tweeet.user_id = current_user.id
     if @tweeet.save
-      ContactMailer.contact_mail(@current_user, @tweeet).deliver
+ #     ContactMailer.contact_mail(@current_user, @tweeet).deliver
       redirect_to tweeets_path, notice: "記事を登録しました。"
     else
       render 'new'
